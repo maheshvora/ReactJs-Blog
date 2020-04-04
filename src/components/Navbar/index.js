@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './style.css';
+import { NavLink } from 'react-router-dom';
+
 
 /**
 * @author
@@ -28,10 +30,10 @@ const Navbar = (props) => {
   return(
     <div className="navbar">
         <ul className="navbarMenu">
-            <li><a href="/">Home</a></li>
-            <li><a href="/about-us">About Us</a></li>
-            <li><a href="/post">Posts</a></li>
-            <li><a href="/contact-us">Contact Us</a></li>
+            <li><NavLink to="/">Home</NavLink></li>
+            <li><NavLink to="/about-us">About Us</NavLink></li>
+            <li><NavLink to="/post">Posts</NavLink></li>
+            <li><NavLink to="/contact-us">Contact Us</NavLink></li>
         </ul>
         <div className="search">
             <form onSubmit={submitSearch}>
